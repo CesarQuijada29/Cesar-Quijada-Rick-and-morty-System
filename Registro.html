@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Rick and morty System :p</title>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+<body>
+    <div class="Pagebuffer1">
+        <h1>Rick and Morty system</h1>        
+    </div>
+    <div class="LogIntable">
+        <h1>Rick and Morty system Registro :p</h1>
+        <section id="registro">
+            <h2>Módulo de Autenticación y Seguridad</h2>
+            <h3>Registro de Nuevos Clientes</h3>
+            <form id="form-registro">
+                <div>
+                    <label for="usuario">Nombre de Usuario:</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                </div>
+
+                <div>
+                    <label for="password">Contraseña (Mínimo 6 números):</label>
+                    <input type="password" id="password" name="password"
+                    pattern="[0-9]{6,}"
+                    title="La contraseña debe contener al menos 6 caracteres numéricos"
+                    required>
+                </div>
+
+                <div>
+                    <label for="confirm-password">Confirmar Contraseña:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" id="btn-registro">Registrarse</button>
+            </form>
+        </section>
+    </div>
+    <script type="text/javascript" src="RegistroLogic.js"></script>
+</body>
+</html>

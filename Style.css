@@ -1,0 +1,234 @@
+:root {
+        --color-bufer:linear-gradient(to bottom, #d1ff6d, #42bdd5);
+        --color-options:linear-gradient(to bottom, #6784f7, #001dd6);
+        --color-boton:rgb(0, 89, 124);
+        --color-Table1:rgb(255, 255, 255, 0.85);
+        --color-Letras:rgba(0, 0, 0);
+        --background-image: url('Fondo2.png');
+    }
+
+body {
+    font-family: Arial, sans-serif;
+    /* orden interno */
+    margin: 0; 
+    /* orden de los hijos */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    background-image:var(--background-image);
+    transition: background-image 0.4s, color 0.4s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.dark-mode {
+        --color-bufer:linear-gradient(to bottom, #9e00ca, #3d0076);
+        --color-options:linear-gradient(to bottom, #6784f7, #000c5b);
+        --color-boton:rgb(200, 0, 230);
+        --color-Table1:rgba(0, 0, 0, 0.85);
+        --color-Letras:rgb(255, 255, 255);
+        --background-image: url('Fondo.png');
+    }
+
+.Registro-mode {
+        --color-bufer:linear-gradient(to bottom, #d1ff6d, #42bdd5);
+        --color-options:linear-gradient(to bottom, #6784f7, #001dd6);
+        --color-boton:rgb(0, 89, 124);
+        --color-Table1:rgba(0, 0, 0, 0.85);
+        --color-Letras:rgb(255, 255, 255);
+        --background-image: url('FondoRegistro.png');
+    }
+
+.Pagebuffer1{
+    width: 100%; /* Tamaño base del padre */
+    height: 6em;
+    background:var(--color-bufer);
+    /* letras internas */
+    padding: 2em;
+    font-family: 'Impact', sans-serif;
+    font-size: clamp(0.75rem, 2vw, 1.5rem);
+    color: #ffffff;
+    text-shadow:
+        -3px -3px 0 rgb(0, 0, 0),  3px -3px 0 rgb(0, 0, 0), -3px 3px 0 rgb(0, 0, 0), 3px 3px 0 rgb(0, 0, 0),
+        -3px  0px 0 rgb(0, 0, 0),  3px  0px 0 rgb(0, 0, 0),  0px 3px 0 rgb(0, 0, 0), 0px -3px 0 rgb(0, 0, 0);
+    /* orden de los hijos */
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 50%;
+    box-sizing: border-box; 
+}
+
+.Pagebuffer2{
+    width: 100%; /* Tamaño base del padre */
+    height: 8%;
+    min-height:6em;
+    position: fixed;
+    top:0px;
+    left:0px; 
+    background:var(--color-bufer);
+    /* letras internas */
+    padding: 2em;
+    font-family: 'Impact', sans-serif;
+    font-size: clamp(0.75rem, 2vw, 1.5rem);
+    color: #ffffff;
+    text-shadow:
+        -3px -3px 0 rgb(0, 0, 0),  3px -3px 0 rgb(0, 0, 0), -3px 3px 0 rgb(0, 0, 0), 3px 3px 0 rgb(0, 0, 0),
+        -3px  0px 0 rgb(0, 0, 0),  3px  0px 0 rgb(0, 0, 0),  0px 3px 0 rgb(0, 0, 0), 0px -3px 0 rgb(0, 0, 0);
+    /* orden de los hijos */
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 5%;
+    box-sizing: border-box; 
+}
+
+.modeButton{
+    /* Forma */
+    height: 4em;
+    width: 16em;
+    min-width:10em;
+    font-size: 0.75em;
+    background-color:var(--color-boton);
+    border-radius: 1em;
+    /* orden */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; 
+    
+}
+
+.modeButton:hover{
+    background-color:rgb(0, 0, 0);  
+}
+
+#PersonajesButton{
+    /* Forma */
+    height: 4em;
+    width: 16em;
+    min-width:10em;
+    font-size: 1em;
+    background-color:var(--color-boton);
+    border-radius: 1em;
+    /* orden */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; 
+    
+}
+
+#PersonajesButton:hover{
+    background-color:rgb(0, 0, 0);
+}
+
+#CapitulosButton{
+    /* Forma */
+    height: 4em;
+    width: 16em;
+    min-width:10em;
+    font-size: 1em;
+    background-color:var(--color-boton);
+    border-radius: 1em;
+    /* orden */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; 
+    
+}
+
+#CapitulosButton:hover{
+    background-color:rgb(0, 0, 0);
+}
+
+#SalirButton{
+    /* Forma */
+    height: 4em;
+    width: 6em;
+    min-width:4em;
+    font-size: 1em;
+    background-color:var(--color-boton);
+    border-radius: 1em;
+    /* orden */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; 
+    
+}
+
+#SalirButton:hover{
+    background-color:rgb(255, 0, 0);
+}
+
+.LogIntable{
+    width: 65%; /* Tamaño base del padre */
+    height: 100%;
+    border-radius: 1em;
+    padding:1em;
+    margin-top: 2.5em;; 
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    background-color:var(--color-Table1);
+    color: var(--color-Letras);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box; 
+}
+
+.ContentTable{
+    width: 65%; /* Tamaño base del padre */
+    height: 100%;
+    border-radius: 1em;
+    padding:1em;
+    margin-top: 10em;; 
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    background-color:var(--color-Table1);
+    color: var(--color-Letras);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box; 
+}
+
+#form-login{
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    padding:2em;
+    display: flex;
+    color: var(--color-Letras);
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box; 
+}
+
+#ProfilePicture{
+    /* Forma */
+    height: 6em;
+    width: 6em;
+    min-width:4em;
+    min-height:4em;
+    font-family: 'Impact', sans-serif;
+    font-size: clamp(0.75rem, 2vw, 1.5rem);
+    color: #ffffff;
+    text-shadow:
+        -3px -3px 0 rgb(0, 0, 0),  3px -3px 0 rgb(0, 0, 0), -3px 3px 0 rgb(0, 0, 0), 3px 3px 0 rgb(0, 0, 0),
+        -3px  0px 0 rgb(0, 0, 0),  3px  0px 0 rgb(0, 0, 0),  0px 3px 0 rgb(0, 0, 0), 0px -3px 0 rgb(0, 0, 0);
+    background-color:var(--color-boton);
+    border-radius: 15em;
+    background-image:url('Profile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* orden */
+    position: fixed;
+    left:2em;
+    bottom:2em;
+    display: flex;
+    align-items: bottom;
+    justify-content: center;
+    box-sizing: border-box; 
+}
