@@ -57,6 +57,33 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = "LogIn.html";
         });
     }
+    const btnbuscar = document.getElementById("btn-buscar");
+    if (btnbuscar) {
+        btnbuscar.addEventListener("click", () => {
+            let PersonajeIngresado = document.querySelector('input[type="text"]').value;
+            let encontrado=0;
+            if(PersonajeIngresado){
+                for (const Personaje of listaPersonajes) {
+                    console.log(Personaje);
+                    let comparacion= Personaje.name;
+                    if (comparacion===PersonajeIngresado){
+                        encontrado=1;
+                        localStorage.setItem('PersonajeActivo', JSON.stringify(Personaje));
+                    }
+                }
+                if (encontrado===1){
+                    window.location.href="PersonajeDetallado.html";
+                    alert("Personaje Encontrado")
+                }
+                else{
+                    alert("No encontrado")
+                }
+            }
+            else{
+                alert("Tienes que llenar la barra de búsqueda");
+            }
+        });
+    }
     const Capitulos = document.getElementById("CapitulosButton");
     if (Capitulos) {
         Capitulos.addEventListener("click", () => {
