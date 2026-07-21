@@ -102,7 +102,9 @@ body {
 }
 
 .modeButton:hover{
-    background-color:rgb(0, 0, 0);  
+    background-color:rgb(0, 0, 0);
+    /*Tipo de cursor*/ 
+    cursor: pointer;  
 }
 
 #PersonajesButton{
@@ -123,6 +125,8 @@ body {
 
 #PersonajesButton:hover{
     background-color:rgb(0, 0, 0);
+    /*Tipo de cursor*/ 
+    cursor: pointer;
 }
 
 #CapitulosButton{
@@ -143,6 +147,8 @@ body {
 
 #CapitulosButton:hover{
     background-color:rgb(0, 0, 0);
+    /*Tipo de cursor*/ 
+    cursor: pointer;
 }
 
 #SalirButton{
@@ -163,6 +169,8 @@ body {
 
 #SalirButton:hover{
     background-color:rgb(255, 0, 0);
+    /*Tipo de cursor*/ 
+    cursor: pointer;
 }
 
 .LogIntable{
@@ -180,7 +188,7 @@ body {
     box-sizing: border-box; 
 }
 
-.ContentTable{
+#ContentTable{
     width: 65%; /* Tamaño base del padre */
     height: 100%;
     border-radius: 1em;
@@ -190,9 +198,10 @@ body {
     background-color:var(--color-Table1);
     color: var(--color-Letras);
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    gap: 2em;
+    flex-wrap: wrap;
     box-sizing: border-box; 
+    justify-content: center;
 }
 
 #form-login{
@@ -231,4 +240,29 @@ body {
     align-items: bottom;
     justify-content: center;
     box-sizing: border-box; 
+}
+
+.cajaPersonaje{
+    height: 5em;
+    width: 4em;
+    font-family: 'Impact', sans-serif;
+    font-size: 4rem;
+    padding: 0.1em;
+    color: #ffffff;
+    text-shadow:
+        -3px -3px 0 rgb(0, 0, 0),  3px -3px 0 rgb(0, 0, 0), -3px 3px 0 rgb(0, 0, 0), 3px 3px 0 rgb(0, 0, 0),
+        -3px  0px 0 rgb(0, 0, 0),  3px  0px 0 rgb(0, 0, 0),  0px 3px 0 rgb(0, 0, 0), 0px -3px 0 rgb(0, 0, 0);
+    background-color:var(--color-boton);
+    border-radius: 0.5em;
+    background-image:url('Profile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* orden */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    /*Tipo de cursor*/ 
+    cursor: pointer;
 }

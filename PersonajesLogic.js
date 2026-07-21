@@ -3,17 +3,39 @@ let datosRecuperados = localStorage.getItem('cuentaActiva');
 let cuentaActual = datosRecuperados ? JSON.parse(datosRecuperados) : null;
 let datosanteriores = localStorage.getItem('usuariosRegistrados');
 let listaUsuarios = datosanteriores ? JSON.parse(datosanteriores) : [];
+//Personajes
+class Personaje {
+    constructor(ID,name, especie, genero, tipo, imagen) {
+        this.ID=ID
+        this.name = name;
+        this.especie=especie;
+        this.genero=genero;
+        this.tipo=tipo;
+        this.imagen=imagen;
+    }
+}
+let datosPersonajes = localStorage.getItem('datosPersonajes');
+let listaPersonajes = datosPersonajes ? JSON.parse(datosPersonajes) : [
+    {ID:1,name: "Morty", especie: "Humano", genero: "Masculino", tipo: "Protagonista",imagen: "Morty.png"},
+    {ID:2,name: "Rick", especie: "Humano/Ciborg", genero: "Masculino", tipo: "Protagonista",imagen: "Rick.png"},
+    {ID:3,name: "Summer", especie: "Humano", genero: "Femenino", tipo: "Secundario",imagen: "Summer.png"},
+    {ID:4,name: "Jerry", especie: "Humano", genero: "Masculino", tipo: "Secundario",imagen: "Jerry.png"},
+    {ID:5,name: "Beth", especie: "Humano", genero: "Femenino", tipo: "Secundario",imagen: "Beth.png"},
+    {ID:6,name: "Evil Morty", especie: "Humano", genero: "Masculino", tipo: "Secundario",imagen: "Evilorty.png"},
+];
+localStorage.setItem('datosPersonajes', JSON.stringify(listaPersonajes));
+const Tabla= document.getElementById('ContentTable');
 
 darkMode.addEventListener("click", (e) => {
     e.preventDefault();
     document.body.classList.toggle("dark-mode");
     if(cuentaActual.mode===0){
         cuentaActual.mode=1;
-        alert(`¡Guardado! ${cuentaActual.mode}`);
         guardarCambiosGlobales()
     }
     else{
         cuentaActual.mode=0;
+        guardarCambiosGlobales()
     }
 });
 const Destacado = document.getElementById("PersonajesButton");
@@ -41,7 +63,39 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = "Episodios.html";
         });
     }
+    //colocacion de los personajes
+    cargarDatosDePersonaje();
+    //Preparacion de los botones
+    document.querySelectorAll(".cajaPersonaje").forEach(elemento => {
+    elemento.addEventListener('click', (e) => { 
+        e.preventDefault();
+        let textoElemento = e.currentTarget.textContent.trim();
+
+        let personajeEncontrado = listaPersonajes.find(character =>
+            character.name === textoElemento
+        );
+        if (personajeEncontrado) {
+            localStorage.setItem('PersonajeActivo', JSON.stringify(personajeEncontrado));
+            console.log(personajeEncontrado);
+        } else {
+            alert("ERROR: FALLO AL ENCONTRAR INFORMACION DEL PERSONAJE");
+        }
+    });
 });
+});
+
+function cargarDatosDePersonaje(){
+    for (const Personaje of listaPersonajes) {
+        console.log(Personaje);
+        const boton = document.createElement('div');
+        boton.textContent= Personaje.name;
+        boton.classList.add("cajaPersonaje");
+        imagen = Personaje.imagen
+        console.log("url('"+imagen+"')");
+        boton.style.backgroundImage = "url('"+imagen+"')";
+        Tabla.appendChild(boton);
+    }
+}
 
 function guardarCambiosGlobales() {
     const idx = listaUsuarios.findIndex(u => u.nombre === cuentaActual.nombre);
