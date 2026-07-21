@@ -204,6 +204,24 @@ body {
     justify-content: center;
 }
 
+#InfoTable{
+    width: 65%; /* Tamaño base del padre */
+    height: 100%;
+    border-radius: 1em;
+    padding:1em;
+    margin-top: 10em;; 
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    background-color:var(--color-Table1);
+    color: var(--color-Letras);
+    display: flex;
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
 #form-login{
     font-family: "Inter", system-ui, -apple-system, sans-serif;
     padding:2em;
@@ -263,6 +281,49 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     box-sizing: border-box;
+    /*Tipo de cursor*/ 
+    cursor: pointer;
+}
+
+#SeccionDetalles{
+    height: 20em;
+    width: 17em;
+    padding: 0.2em;
+    border-radius: 0.5em;
+    border: 1em solid black;
+    border-color: var(--color-boton);
+    background-image:url('Profile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#Titulo{
+    font-size: 4rem;
+    color: #ffffff;
+    text-shadow:
+        -3px -3px 0 rgb(0, 0, 0),  3px -3px 0 rgb(0, 0, 0), -3px 3px 0 rgb(0, 0, 0), 3px 3px 0 rgb(0, 0, 0),
+        -3px  0px 0 rgb(0, 0, 0),  3px  0px 0 rgb(0, 0, 0),  0px 3px 0 rgb(0, 0, 0), 0px -3px 0 rgb(0, 0, 0);
+}
+
+#AtrasButton{
+    /* Forma */
+    height: 4em;
+    width: 6em;
+    min-width:4em;
+    font-size: 1em;
+    background-color:var(--color-boton);
+    border-radius: 1em;
+    /* orden */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; 
+    
+}
+
+#AtrasButton:hover{
+    background-color:rgb(169, 255, 98);
     /*Tipo de cursor*/ 
     cursor: pointer;
 }

@@ -77,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (personajeEncontrado) {
             localStorage.setItem('PersonajeActivo', JSON.stringify(personajeEncontrado));
             console.log(personajeEncontrado);
+            window.location.href="PersonajeDetallado.html";
         } else {
             alert("ERROR: FALLO AL ENCONTRAR INFORMACION DEL PERSONAJE");
         }

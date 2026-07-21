@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Rick and morty System: Info de personaje :p</title>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+<body>
+    <div id="ProfilePicture">
+        <h2>Loading...</h2>
+    </div>
+    <div class="Pagebuffer2">
+        <h2>Descripción de personaje:</h2>
+        <div id="AtrasButton">
+            <h2>Atras</h2>
+        </div>
+        <div id="SalirButton">
+            <h2>Salir</h2>
+        </div>
+    </div>
+    <div id="InfoTable">
+        <h2>INFO DETALLADA</h2>
+        <div id="Nombre"> Cargando... 
+        </div>
+        <div id="SeccionDetalles">  
+        </div>
+        <div id="ID"> Cargando... 
+        </div>
+        <div id="Genero"> Cargando... 
+        </div>
+        <div id="Especie"> Cargando... 
+        </div>
+        <div id="Tipo"> Cargando... 
+        </div>
+        <h2></h2>
+        <form id="form-Edicion">
+            <div id="Titulo"> Editar Información </div>
+            <h2></h2>
+                <div>
+                    <label for="NewID">Nueva ID:</label>
+                    <input type="text" id="NewID" name="NewID" required>
+                </div>
+                <h2></h2>
+                
+                <div>
+                    <label for="Newgenero">Nuevo Género:</label>
+                    <input type="text" id="Newgenero" name="Newgenero"
+                    required>
+                </div>
+                <h2></h2>
+
+                <div>
+                    <label for="Newespecie">Nueva Especie:</label>
+                    <input type="text" id="Newespecie" name="Newespecie"
+                    required>
+                </div>
+                <h2></h2>
+
+                <div>
+                    <label for="NewTipo">Nuevo tipo de personaje:</label>
+                    <input type="text" id="NewTipo" name="NewTipo"
+                    required>
+                </div>
+                <h2></h2>
+
+                <button type="submit" id="btn-Editar">Guardar Cambios</button>
+                <h2></h2>
+            </form>
+    </div>
+    <script type="text/javascript" src="PersonajeDetalladoLogic.js"></script>
+</body>
+</html>
