@@ -306,6 +306,29 @@ body {
     cursor: pointer;
 }
 
+.cajaCapitulo{
+    height: 100%;
+    min-height:4em;
+    width: 100%;
+    min-width:6em;
+    font-family: 'Impact', sans-serif;
+    font-size: 3rem;
+    padding: 0.5em;
+    color: #ffffff;
+    text-shadow:
+        -3px -3px 0 rgb(0, 0, 0),  3px -3px 0 rgb(0, 0, 0), -3px 3px 0 rgb(0, 0, 0), 3px 3px 0 rgb(0, 0, 0),
+        -3px  0px 0 rgb(0, 0, 0),  3px  0px 0 rgb(0, 0, 0),  0px 3px 0 rgb(0, 0, 0), 0px -3px 0 rgb(0, 0, 0);
+    background-color:var(--color-boton);
+    border-radius: 0.5em;
+    /* orden */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    /*Tipo de cursor*/ 
+    cursor: pointer;
+}
+
 #SeccionDetalles{
     height: 20em;
     width: 17em;
