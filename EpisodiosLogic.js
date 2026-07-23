@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnCerrar = document.getElementById("SalirButton");
     if (btnCerrar) {
         btnCerrar.addEventListener("click", () => {
-            window.location.href = "LogIn.html";
+            window.location.href = "index.html";
         });
     }
     const btnbuscar = document.getElementById("btn-buscar");
