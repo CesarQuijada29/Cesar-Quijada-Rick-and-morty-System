@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnCerrar = document.getElementById("SalirButton");
     if (btnCerrar) {
         btnCerrar.addEventListener("click", () => {
-            window.location.href = "index.html";
+            window.location.href = "LogIn.html";
         });
     }
     const btnAtras = document.getElementById("AtrasButton");

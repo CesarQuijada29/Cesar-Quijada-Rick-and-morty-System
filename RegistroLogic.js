@@ -30,7 +30,7 @@ document.querySelector('#btn-registro').addEventListener('click', (e) => {
         listaUsuarios.push(user);
         localStorage.setItem('usuariosRegistrados', JSON.stringify(listaUsuarios));
         alert(`¡Registro exitoso!\n\nBienvenido a Rick and Morty System, ${usuarioExtraido}.\n`);
-        window.location.href = "index.html";
+        window.location.href = "LogIn.html";
     }
     else{
         alert(`¡Registro Fallido!\n\nRevisa si llenaste bien los datos :[, ${usuarioExtraido}.\n`);

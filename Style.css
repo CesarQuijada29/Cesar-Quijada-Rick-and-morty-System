@@ -13,9 +13,9 @@ body {
     margin: 0; 
     /* orden de los hijos */
     display: flex;
-    min-width:500px;
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
     background-image:var(--background-image);
     transition: background-image 0.4s, color 0.4s;
     background-repeat: no-repeat;
@@ -44,8 +44,7 @@ body {
 
 .Pagebuffer1{
     width: 100%; /* Tamaño base del padre */
-    height: 6em;
-    min-width:500px;
+    height: 8em;
     background:var(--color-bufer);
     /* letras internas */
     padding: 2em;
@@ -65,9 +64,8 @@ body {
 
 .Pagebuffer2{
     width: 100%; /* Tamaño base del padre */
-    height: 8%;
-    min-height:6em;
-    min-width:500px;
+    height: 8em;
+    min-width:400px;
     position: fixed;
     top:0px;
     left:0px; 
@@ -196,7 +194,7 @@ body {
     height: 100%;
     border-radius: 1em;
     padding:1em;
-    margin-top: 2em;; 
+    margin-top: 2em;
     font-family: "Inter", system-ui, -apple-system, sans-serif;
     background-color:var(--color-Table1);
     color: var(--color-Letras);
@@ -212,7 +210,7 @@ body {
     height: 100%;
     border-radius: 1em;
     padding:1em;
-    margin-top: 10em;; 
+    margin-top: 13em;
     font-family: "Inter", system-ui, -apple-system, sans-serif;
     background-color:var(--color-Table1);
     color: var(--color-Letras);
@@ -231,7 +229,7 @@ body {
     border-radius: 1em;
     padding:0.1em;
     gap: 0.5em;
-    margin-top: 10em;
+    margin-top: clamp(10em, 20vw, 20em);
     font-size: clamp(0.65rem, 2vw, 1rem);
     font-family: "Inter", system-ui, -apple-system, sans-serif;
     background-color:var(--color-Table1);

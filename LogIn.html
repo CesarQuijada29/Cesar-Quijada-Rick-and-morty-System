@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Rick and morty System :p</title>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+<body>
+    <div class="Pagebuffer1">
+        <h1>Rick and Morty system</h1>        
+        <div class="modeButton" id="darkSkin">
+            <h2>Modo Oscuro</h2>
+        </div>
+    </div>
+    <div class="LogIntable">
+        <section id="login">
+            <h1>Rick and Morty system Log In</h1>
+            <form id="form-login">
+                <h2>Usuario:</h2>
+                <input type="text" placeholder="Usuario" required>
+                <h2>Contraseña:</h2>
+                <input type="password" placeholder="Contraseña" required>
+                <h2> </h2>
+                <button type="submit" id="btn-ingresar">Ingresar</button>
+                <h2> </h2>
+                <h3>Si no tienes una cuenta puedes registrarte aquí</h3>
+                <button type="submit" id="btn-registro">Registrarse</button>
+            </form>
+            <div id="loader" style="display: none;">
+                <p>Validando credenciales con servidores centrales...</p>
+                <div class="spinner"></div>
+
+            </div>
+        </section>
+    </div>
+    <script type="text/javascript" src="LogInLogic.js"></script>
+</body>
+</html>
